@@ -31,13 +31,13 @@ const Home = () => {
           <div className="flex justify-center gap-4">
             <Link
               to="/auth/login"
-              className="bg-white text-blue-700 border-white border-[1px] px-6 py-2 rounded-full shadow hover:bg-blue-700 hover:text-white hover:border-white transition"
+              className="bg-white text-[13px] md:text-[16px] text-blue-700 border-white border-[1px] px-6 py-2 rounded-full shadow hover:bg-blue-700 hover:text-white hover:border-white transition"
             >
               Login
             </Link>
             <Link
               to="/auth/signup"
-              className="border border-white text-white px-6 py-2 rounded-full hover:bg-black hover:text-white hover:border-black transition"
+              className="border border-white text-[13px] md:text-[16px] text-white px-6 py-2 rounded-full hover:bg-black hover:text-white hover:border-black transition"
             >
               Get Started &#8250;
             </Link>
@@ -50,7 +50,7 @@ const Home = () => {
         </div>
 
       {/* Features Section */}
-      <section className="max-w-[1440px] mx-auto px-24 py-16 grid gap-8 md:grid-cols-3 bg-white ">
+      <section className="max-w-[1440px] mx-auto  px-16 md:px-24 py-16 grid gap-8 md:grid-cols-3 bg-white ">
         {[
           {
             title: "Create & Manage",
