@@ -39,7 +39,7 @@ const Signup = () => {
     localStorage.setItem("ticketapp_users", JSON.stringify(users));
     setToast({ message: "☑ Signup successful! Redirecting to login...", type: "success" });
 
-    setTimeout(() => navigate("/login"), 1500);
+    setTimeout(() => navigate("/auth/login"), 1500);
   };
 
   return (
