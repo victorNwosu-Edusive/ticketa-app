@@ -7,7 +7,7 @@ const Toast = ({ message, type = "success", onClose }) => {
   }, [onClose]);
 
   const bgColor =
-    type === "error" ? "bg-red-500/15 border-[1px] border-red-500 text-red-500" : type === "info" ? "bg-blue-500" : "bg-green-500/15 border-[1px] border-green-500 text-green-500";
+    type === "error" ? "bg-red-100 border-[1px] border-red-500 text-red-500" : type === "info" ? "bg-blue-500" : "bg-green-100 border-[1px] border-green-500 text-green-500";
 
   return (
     <div
