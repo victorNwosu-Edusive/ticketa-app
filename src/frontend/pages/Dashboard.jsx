@@ -97,10 +97,10 @@ const Dashboard = () => {
 
         <div className="border-[1px] p-4 rounded-md bg-slate-50 shadow">
           <div className="flex items-center justify-between">
-            <h2 className="text-xl font-semibold">Ticket Management</h2>
+            <h2 className=" text-sm md:text-xl font-semibold">Ticket Management</h2>
             <Link
               to="/tickets"
-              className="text-blue-600 hover:underline text-[13px]"
+              className="text-blue-600 hover:underline text-[12px]"
             >
               Go to Tickets →
             </Link>
