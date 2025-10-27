@@ -38,7 +38,7 @@ const Navbar = () => {
 
         {/* Mobile Hamburger Button */}
         <button
-          className="md:hidden focus:outline-none relative w-6 h-6 z-50"
+          className="md:hidden focus:outline-none relative focus:bg-slate-300 hover:bg-slate-300 duration-100 ease-in w-6 h-6 z-50"
           onClick={() => setIsOpen(!isOpen)}
         >
           <span
