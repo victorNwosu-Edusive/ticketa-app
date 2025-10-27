@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar";
 import { getAllTickets } from "../../services/ticketService";
 import Toast from "../../components/Toast";
 import { Link } from "react-router-dom";
+import { SquareArrowOutUpRight } from "lucide-react";
 
 const statusMap = {
   open: "Open",
@@ -50,6 +51,7 @@ const Dashboard = () => {
 
   const total = tickets.length;
   const open = tickets.filter((t) => t.status === "open").length;
+  const inprogress = tickets.filter((t) => t.status === "in_progress").length;
   const resolved = tickets.filter((t) => t.status === "closed").length;
 
   return (
@@ -78,18 +80,23 @@ const Dashboard = () => {
           </div>
         )}
 
-        <div className="grid gap-6 md:grid-cols-3 mb-8 *:cursor-pointer">
+        <div className="grid gap-6 md:grid-cols-4 mb-8 *:cursor-pointer">
           <div className="bg-blue-700 border-[1px] rounded-2xl shadow p-10">
             <p className="text-sm mb-6 text-white">Total tickets</p>
             <p className="text-white text-6xl font-semibold">{total}</p>
           </div>
 
-          <div className="bg-slate-50 border-[1px] rounded-2xl shadow p-10">
+          <div className="bg-green-100 border-[1px] border-green-400 rounded-2xl shadow p-10">
             <p className="text-sm mb-6 text-gray-500">Open tickets</p>
             <p className="text-6xl font-semibold">{open}</p>
           </div>
 
-          <div className="bg-slate-50 border-[1px] rounded-2xl shadow p-10">
+          <div className="bg-amber-100 border-[1px] border-amber-400 rounded-2xl shadow p-10">
+            <p className="text-sm mb-6 text-gray-500">In Progress tickets</p>
+            <p className="text-6xl font-semibold">{inprogress}</p>
+          </div>
+
+          <div className="bg-gray-100 border-[1px] border-gray-400 rounded-2xl shadow p-10">
             <p className="text-sm mb-6 text-gray-500">Resolved tickets</p>
             <p className="text-6xl font-semibold">{resolved}</p>
           </div>

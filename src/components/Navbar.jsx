@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logoblue from "../assets/images/ticketa-blue.png";
+import { LogOut } from "lucide-react";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -30,9 +31,9 @@ const Navbar = () => {
           </Link>
           <button
             onClick={handleLogout}
-            className="ml-4 bg-red-500 text-[12px] md:text-sm text-white px-3 py-2 rounded-md hover:bg-red-600"
+            className="ml-4 flex items-center justify-center gap-3 bg-red-500 text-[12px] md:text-sm text-white px-3 py-2 rounded-md hover:bg-red-600"
           >
-            Logout ➜]
+            Logout <LogOut size={13} />
           </button>
         </div>
 
@@ -82,9 +83,9 @@ const Navbar = () => {
                 handleLogout();
                 setIsOpen(false);
               }}
-              className="bg-red-500 text-sm text-white px-4 py-2 rounded-md hover:bg-red-600"
+              className="bg-red-500 flex items-center justify-center gap-3 text-sm text-white px-4 py-2 rounded-md hover:bg-red-600"
             >
-              Logout ➜]
+              Logout <LogOut size={13} />
             </button>
           </div>
         </div>

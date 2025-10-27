@@ -8,6 +8,7 @@ import {
   updateTicket,
   deleteTicket,
 } from "../../services/ticketService";
+import { Edit } from "lucide-react";
 
 const STATUS_OPTIONS = ["open", "in_progress", "closed"];
 
@@ -198,7 +199,7 @@ const Tickets = () => {
               </div>
 
               <div className="mt-4 md:mt-0 md:ml-6 flex items-center gap-2">
-                <button onClick={() => startEdit(t)} className="px-3 py-1 text-[12px] md:text-[14px] border rounded-md">Edit</button>
+                <button onClick={() => startEdit(t)} className="px-3 py-1 text-[12px] md:text-[14px] border rounded-md flex items-center justify-center gap-2"> <Edit size={12} /> Edit</button>
                 <button onClick={() => handleDelete(t.id)} className="px-3 py-1 text-[12px] md:text-[14px] bg-red-500 text-white rounded-md">Delete</button>
               </div>
 
