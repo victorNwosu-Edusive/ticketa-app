@@ -67,7 +67,7 @@ const Home = () => {
         ].map((feature, i) => (
           <div
             key={i}
-            className="bg-white rounded-2xl  p-7 border-[1px] border-blue-700 text-center hover:shadow-lg transition"
+            className="bg-white rounded-2xl  p-7 border-[1px] border-blue-700 text-center shadow-lg transition"
           >
             <h3 className="text-[16px] md:text-xl font-semibold mb-3 text-blue-700">{feature.title}</h3>
             <p className="text-[14px] text-gray-600">{feature.text}</p>

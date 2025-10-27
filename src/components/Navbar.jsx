@@ -62,18 +62,18 @@ const Navbar = () => {
       {/* Mobile Dropdown Menu */}
       {isOpen && (
         <div className="md:hidden bg-white border-t shadow-md absolute top-full left-0 w-full animate-slideDown">
-          <div className="flex flex-col items-center py-4 space-y-3">
+          <div className="flex flex-col items-center py-4 space-y-2">
             <Link
               to="/dashboard"
               onClick={() => setIsOpen(false)}
-              className="text-sm hover:underline"
+              className="w-full p-3 text-center hover:bg-slate-50 text-sm "
             >
               Dashboard
             </Link>
             <Link
               to="/tickets"
               onClick={() => setIsOpen(false)}
-              className="text-sm hover:underline"
+              className="w-full p-3 text-center hover:bg-slate-50 text-sm "
             >
               Tickets
             </Link>
