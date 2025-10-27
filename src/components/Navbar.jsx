@@ -1,6 +1,7 @@
 // src/components/Navbar.jsx
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import logoblue from "../assets/images/ticketa-blue.png";
 import { LogOut } from "lucide-react";
 
@@ -61,35 +62,43 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Dropdown Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-white border-t shadow-md absolute top-full left-0 w-full animate-slideDown">
-          <div className="flex flex-col items-center py-4 space-y-2">
-            <Link
-              to="/dashboard"
-              onClick={() => setIsOpen(false)}
-              className="w-full p-3 text-center hover:bg-slate-50 text-sm "
-            >
-              Dashboard
-            </Link>
-            <Link
-              to="/tickets"
-              onClick={() => setIsOpen(false)}
-              className="w-full p-3 text-center hover:bg-slate-50 text-sm "
-            >
-              Tickets
-            </Link>
-            <button
-              onClick={() => {
-                handleLogout();
-                setIsOpen(false);
-              }}
-              className="bg-red-500 flex items-center justify-center gap-3 text-sm text-white px-4 py-2 rounded-md hover:bg-red-600"
-            >
-              Logout <LogOut size={13} />
-            </button>
-          </div>
-        </div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="md:hidden bg-white border-t shadow-md absolute top-full left-0 w-full"
+          >
+            <div className="flex flex-col items-center py-4 space-y-2">
+              <Link
+                to="/dashboard"
+                onClick={() => setIsOpen(false)}
+                className="w-full p-3 text-center hover:bg-slate-50 text-sm"
+              >
+                Dashboard
+              </Link>
+              <Link
+                to="/tickets"
+                onClick={() => setIsOpen(false)}
+                className="w-full p-3 text-center hover:bg-slate-50 text-sm"
+              >
+                Tickets
+              </Link>
+              <button
+                onClick={() => {
+                  handleLogout();
+                  setIsOpen(false);
+                }}
+                className="bg-red-500 flex items-center justify-center gap-3 text-sm text-white px-4 py-2 rounded-md hover:bg-red-600"
+              >
+                Logout <LogOut size={13} />
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
