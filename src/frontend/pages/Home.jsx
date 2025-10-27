@@ -21,7 +21,7 @@ const Home = () => {
 
         {/* Content */}
         <div className="z-10 max-w-[1440px] px-6">
-          <h1 className="text-[27px] md:text-5xl font-bold mb-6 text-white">
+          <h1 className="text-[24px] md:text-5xl font-bold mb-6 text-white">
              Manage <span className="italic">Tickets</span> with Ease
           </h1>
           <p className="max-w-2xl mx-auto md:text-lg text-white mb-8">
