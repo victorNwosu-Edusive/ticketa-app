@@ -174,8 +174,8 @@ const Tickets = () => {
             </div>
 
             <div className="md:col-span-2 flex gap-3">
-              <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded-md">Create Ticket</button>
-              <button type="button" onClick={() => { setForm(emptyForm); setFormErrors({}); }} className="px-4 py-2 rounded-md border">Reset</button>
+              <button type="submit" className="bg-blue-700 text-[12px] md:text-sm text-white px-4 py-2 rounded-md">Create Ticket</button>
+              <button type="button" onClick={() => { setForm(emptyForm); setFormErrors({}); }} className="text-[12px] md:text-sm px-4 py-2 rounded-md border-[1px] border-black">Reset</button>
             </div>
           </form>
         </div>
@@ -198,14 +198,14 @@ const Tickets = () => {
               </div>
 
               <div className="mt-4 md:mt-0 md:ml-6 flex items-center gap-2">
-                <button onClick={() => startEdit(t)} className="px-3 py-1 border rounded-md text-sm">Edit</button>
-                <button onClick={() => handleDelete(t.id)} className="px-3 py-1 bg-red-500 text-white rounded-md text-sm">Delete</button>
+                <button onClick={() => startEdit(t)} className="px-3 py-1 text-[12px] md:text-[14px] border rounded-md">Edit</button>
+                <button onClick={() => handleDelete(t.id)} className="px-3 py-1 text-[12px] md:text-[14px] bg-red-500 text-white rounded-md">Delete</button>
               </div>
 
               {/* Edit panel (inline) */}
               {editing && editing.id === t.id && (
-                <div className="w-full md:w-[60%] mt-4">
-                  <div className="bg-gray-50 p-4 rounded-md border">
+                <div className="w-full md:w-[60%] ml-0 md:ml-4 mt-4">
+                  <div className="bg-slate-50 p-4 rounded-md border">
                     <div className="flex flex-col gap-2">
                       <input name="title" value={editing.form.title} onChange={onEditChange} className={`w-full border rounded px-2 py-1 ${editErrors.title ? "border-red-400" : "border-gray-300"}`} />
                       {editErrors.title && <p className="text-red-500 text-sm">{editErrors.title}</p>}
@@ -218,8 +218,8 @@ const Tickets = () => {
                       <textarea name="description" value={editing.form.description} onChange={onEditChange} className="w-full border rounded px-2 py-1" rows="3" />
 
                       <div className="flex gap-2 justify-end mt-2">
-                        <button onClick={() => setEditing(null)} className="px-3 py-1 border rounded-md">Cancel</button>
-                        <button onClick={handleSaveEdit} className="px-3 py-1 bg-blue-600 text-white rounded-md">Save</button>
+                        <button onClick={() => setEditing(null)} className="px-3 py-1 text-[12px] md:text-[14px] border rounded-md">Cancel</button>
+                        <button onClick={handleSaveEdit} className="px-3 py-1 text-[12px] md:text-[14px] bg-blue-700 text-white rounded-md">Save</button>
                       </div>
                     </div>
                   </div>

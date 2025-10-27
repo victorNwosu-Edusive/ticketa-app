@@ -18,13 +18,13 @@ const Navbar = () => {
         <Link to="/"><img src={logoblue} className="h-7 w-auto" alt="" /></Link>
 
         <div className="flex items-center gap-4">
-          <Link to="/dashboard" className="text-sm hover:underline">Dashboard</Link>
-          <Link to="/tickets" className="text-sm hover:underline">Tickets</Link>
+          <Link to="/dashboard" className=" text-[12px] md:text-sm hover:underline">Dashboard</Link>
+          <Link to="/tickets" className="text-[12px] md:text-sm hover:underline">Tickets</Link>
           <button
             onClick={handleLogout}
-            className="ml-4 bg-red-500 text-white px-3 py-1 rounded-md text-sm hover:bg-red-600"
+            className="ml-4 bg-red-500 text-[12px] md:text-sm text-white px-3 py-2 rounded-md hover:bg-red-600"
           >
-            Logout
+            Logout ➜]
           </button>
         </div>
       </div>

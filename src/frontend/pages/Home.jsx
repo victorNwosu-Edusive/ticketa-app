@@ -12,16 +12,16 @@ const Home = () => {
         </nav>
       <section className="relative pt-32 bg-blue-700 flex flex-col justify-center items-center text-center py-20 overflow-hidden">
        {/* Left Decorative Circle */}
-        <div className="absolute top-20 left-10 w-40 h-60 border-[2px] border-blue-200/40 rounded-full"></div>
+        <div className="absolute top-20 left-10 w-40 h-60 border-[2px] border-blue-200/35 rounded-full"></div>
 
         {/* right Decorative Circle */}
-        <div className="absolute top-20 right-5 md:right-48 w-40 h-40 border-[2px] border-blue-200/40 rounded-full"></div>
+        <div className="absolute top-20 right-5 md:right-48 w-40 h-40 border-dotted border-[2px] border-blue-200/35 rounded-full"></div>
 
         
 
         {/* Content */}
         <div className="z-10 max-w-[1440px] px-6">
-          <h1 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+          <h1 className="text-[27px] md:text-5xl font-bold mb-6 text-white">
              Manage <span className="italic">Tickets</span> with Ease
           </h1>
           <p className="max-w-2xl mx-auto md:text-lg text-white mb-8">
