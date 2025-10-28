@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import Toast from "../../components/Toast";
 
 const Signup = () => {
+  useEffect(() => {
+    document.title = "Sign Up - Ticketa";
+  }, []);
   const navigate = useNavigate();
   const [form, setForm] = useState({ name: "", email: "", password: "" });
   const [errors, setErrors] = useState({});

@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from '../../assets/images/ticketa.png';
 import '../../App.css';
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "Ticketa - Manage Tickets with Ease";
+  }, []);
   return (
     <div className="flex flex-col min-h-screen  text-gray-800">
       {/* Hero Section */}

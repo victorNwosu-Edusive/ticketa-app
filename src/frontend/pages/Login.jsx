@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import Toast from "../../components/Toast";
 
 const Login = () => {
+  useEffect(() => {
+    document.title = "Login - Ticketa";
+  }, []);
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

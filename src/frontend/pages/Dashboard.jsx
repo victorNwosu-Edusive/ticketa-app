@@ -25,6 +25,10 @@ const Dashboard = () => {
   const [user, setUser] = useState(null); // 👈 added this
 
   useEffect(() => {
+    document.title = "Dashboard - Ticketa";
+  }, []);
+
+  useEffect(() => {
     // 👇 Fetch logged-in user
     const session = JSON.parse(localStorage.getItem("ticketapp_session"));
     if (session && session.user) {

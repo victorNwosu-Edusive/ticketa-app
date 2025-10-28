@@ -10,6 +10,8 @@ import Login from "./frontend/pages/Login";
 import Signup from "./frontend/pages/Signup";
 import Dashboard from "./frontend/pages/Dashboard";
 import Tickets from "./frontend/pages/Tickets";
+import CreateTicket from "./frontend/pages/CreateTicket";
+import EditTicket from "./frontend/pages/EditTicket";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +36,14 @@ const router = createBrowserRouter([
       {
         path: "tickets",
         element: <Tickets />,
+      },
+      {
+        path: "tickets/new",
+        element: <CreateTicket />,
+      },
+      {
+        path: "tickets/:ticketId/edit",
+        element: <EditTicket />,
       },
     ],
   },

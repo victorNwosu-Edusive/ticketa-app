@@ -52,6 +52,18 @@ export async function getAllTickets() {
   }
 }
 
+export async function getTicketById(id) {
+  await wait(200);
+  try {
+    const all = _readAll();
+    const ticket = all.find((t) => t.id === id);
+    if (!ticket) throw new Error("Ticket not found");
+    return ticket;
+  } catch {
+    return Promise.reject(new Error("Failed to load ticket. Please retry."));
+  }
+}
+
 export async function createTicket(ticket) {
   await wait(200);
   try {
