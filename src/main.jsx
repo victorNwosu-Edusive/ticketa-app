@@ -12,6 +12,7 @@ import Dashboard from "./frontend/pages/Dashboard";
 import Tickets from "./frontend/pages/Tickets";
 import CreateTicket from "./frontend/pages/CreateTicket";
 import EditTicket from "./frontend/pages/EditTicket";
+import ProtectedRoute from "./components/ProtectedRoutes";
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,11 @@ const router = createBrowserRouter([
       },
       {
         path: "dashboard",
-        element: <Dashboard />,
+        element: (
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "tickets",
